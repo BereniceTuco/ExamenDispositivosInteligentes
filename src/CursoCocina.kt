@@ -9,7 +9,12 @@ class CursoCocina (
 )  {
     companion object {
         private val id = AtomicInteger()
-        fun newEntry(name: String, description: String) = Curso(id.getAndDecrement(), name, description)
+        fun newEntry(name: String, description: String){
+
+            Curso(id.getAndDecrement(), name, description)
+
+        }
+
         fun message(message:String):Unit{
             println("${message}")
         }
